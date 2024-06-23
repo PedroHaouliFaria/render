@@ -1,0 +1,377 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.container {
+  width: 100%;
+  max-width: 1139px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  left: 3.5%;
+  top: 20%;
+  
+}
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.progress-bar span2 {
+  font-size: 14px;
+  color: #555;
+  position: absolute;
+  top: -4.5%;
+  left: 22%;
+  font-weight: bolder;
+  
+}
+.progress-bar span1 {
+  font-size: 14px;
+  color: #555;
+  position: absolute;
+  top: 1.0%;
+  left: -1%;
+  font-weight: bold;
+
+}
+.progress {
+  width: 96%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 1.5%
+}
+.progress::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 16%;
+  background-color: #3b82f6;
+}
+.content {
+  background-color: #007EA7;
+  border-radius: 27px;
+  padding: 40px;
+  color: white;
+  border: 3px solid #007EA7;
+  top: 10%;
+  
+}
+.content h2 {
+  margin-top: 0;
+  font-size: 10px;
+  color: black;
+  top: 10%
+}
+.question {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.question p {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
+.question ul {
+  list-style: none;
+  padding: 0;
+}
+.question li {
+  margin: 5px 0;
+  color: black;
+}
+
+.question li.selected {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.navigation button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+.navigation button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+  header {
+height: 60px;
+}
+.Headers {
+  height: 60px;
+  background-color: #17255A;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #FFFFFF;
+  align-self: center;
+  padding: 10px;
+}
+.GroupColor {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-self: center;
+}
+.Pages {
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+}
+.Pages a {
+  flex: 1;
+  margin: 0 100px;
+  color: #FFFFFF;
+}
+.Pages a:hover {
+  text-decoration: underline;
+}
+.profileInfo {
+  display: flex;
+  align-self: normal;
+}
+.Username {
+  flex: 1;
+  margin: 0 10px;
+  align-self: center;
+  font-size: 1.1rem;
+}
+.ImageProfile {
+  width: 50px;
+  height: 50px;
+}
+
+.SelfAssessment {
+  position: absolute;
+  top: 12%;
+  left: 2%;
+
+}
+
+.content2{
+  position: absolute;
+  top: 20%;
+  left: -50%;}
+
+.content h2 {
+position: absolute;
+top: 9%;
+left: 3.5%;
+font-size: 0.7rem;
+}
+
+
+
+
+.PosicaoBotao {
+  position: absolute;
+  top: 176%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Estilos do botão */
+
+background-color: #ADD8E6; /* Azul claro bebê */
+color: #fff; /* Cor do texto */
+border: 2px solid #87CEEB; /* Borda azul clara */
+border-radius: 10px; /* Bordas arredondadas de leve */
+padding: 10px 20px; /* Espaçamento interno */
+font-size: 18px; /* Tamanho da fonte */
+font-weight: bold; /* Negrito */
+cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+transition: background-color 0.3s, transform 0.3s; /* Transição suave para o hover */
+height: 1cm;
+}
+
+.PosicaoBotao:hover {
+  background-color: #87CEEB; /* Cor de fundo ao passar o mouse */
+  transform: translate(-50%, -50%) scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+span {
+  color:#000000
+}
+
+h4 {
+  color: red
+}
+
+* {
+  margin: 0; /* Resetting margin */
+  padding: 0; /* Resetting padding */
+  box-sizing: border-box; /* Box model includes padding and border in element's total width and height */
+  text-decoration: none; /* Removing text decoration */
+  max-width: 100%; /* Ensuring elements don't exceed parent's width */
+  max-height: 100%; /* Ensuring elements don't exceed parent's height */
+}
+
+
+.BackImage {
+  position: absolute; /* Absolute positioning */
+  background-position-x: center; /* Centering background horizontally */
+  background-position-y: center; /* Centering background vertically */
+  width: 100%; /* Full width */
+  height: 90%; /* 90% of parent height */
+  top: 18.8%; /* Position from top */
+  left: 0.5%; /* Position from left */
+  z-index: -1; /* Behind other elements */
+}
+
+header {
+  height: 50px; /* Setting header height */
+}
+
+.Headers {
+  height: 60px; /* Setting header container height */
+  background-color: #17255a; /* Setting background color */
+  display: flex; /* Flex container */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Distributing items evenly */
+  color: #ffffff; /* Setting text color */
+  align-self: center; /* Centering vertically */
+  padding: 6px; /* Adding padding */
+}
+
+.GroupColor {
+  font-size: 1.2rem; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.Pages {
+  font-size: 1.15rem; /* Setting font size */
+  font-weight: 600; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+  justify-content: space-around; /* Distributing items evenly */
+}
+
+.Pages a {
+  flex: 1; /* Flexible width */
+  margin: 0 100px; /* Margin around each link */
+  color: #ffffff; /* Setting text color */
+}
+
+.Pages a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.profileInfo {
+  display: flex; /* Flex container */
+  align-self: normal; /* Aligning content */
+}
+
+.Username {
+  flex: 1; /* Flexible width */
+  margin: 8px; /* Margin around username */
+  align-self: center; /* Centering vertically */
+  font-size: 1.1rem; /* Setting font size */
+  color: #ffffff; /* Setting text color */
+}
+
+.profileInfo a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #ffffff; /* Setting text color */
+}
+
+.ImageProfile {
+  width: 40px; /* Setting width */
+  height: 40px; /* Setting height */
+}
+
+.top {
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.MemberPhoto {
+  margin: 20px; /* Margin */
+  width: 150px; /* Setting width */
+  height: 150px; /* Setting height */
+  border: #17255a 5px solid; /* Border styling */
+  border-radius: 50%; /* Border radius */
+}
+
+.MemberName {
+  margin-top: 10px; /* Margin from the top */
+  font-size: 1.8rem; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+}
+
+.nationality {
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+  font-weight: 600; /* Setting font weight */
+}
+
+.MemberInformation {
+  margin-top: 15px; /* Margin from the top */
+  font-weight: 600; /* Setting font weight */
+}
+
+.country {
+  margin-left: 5px; /* Margin from the left */
+  width: 30px; /* Setting width */
+  height: 30px; /* Setting height */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.Down {
+  display: flex; /* Flex container */
+  place-items: center; /* Centering items */
+  flex-direction: column; /* Column direction */
+}
+
+textarea {
+  width: 500px; /* Setting width */
+  height: 220px; /* Setting height */
+  margin: 0 auto; /* Centering horizontally */
+  padding: 20px; /* Padding */
+  border-radius: 20px; /* Border radius */
+  resize: none; /* Disabling resize */
+  background-color: #ffffff; /* Setting background color */
+  font-family: "Red Hat Text", sans-serif; /* Setting font family */
+  color: black; /* Setting text color */
+}
+
+.Group-dropdown{
+  color:#ffffff
+}
+
+
+
+.ColorName{
+  color: #ffffff;
+  position: absolute;
+  font-size: 0,5cm;
+  top: 02.5%;
+  left: 87%;
+  font-weight: 700;
+  font-size: 1.0rem;
+  font-family: 'Red Hat Text', sans-serif;
+}

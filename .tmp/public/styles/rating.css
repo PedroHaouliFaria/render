@@ -1,0 +1,249 @@
+/* Resetting default margins and paddings, and setting box-sizing to border-box for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Styling for the body of the page */
+body {
+    font-size: 100%;
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('assets/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styling for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #17255A;
+    color: white;
+    padding: 8px 18px;
+}
+
+/* Styling for the navigation bar */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 260px;
+}
+
+/* Styling for navigation links */
+.link {
+    color: #ffffff;
+}
+
+/* Container for the page links */
+.page-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    gap: 220px;
+    color: white;
+}
+
+/* Container for profile information */
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+/* Styling for the profile image */
+.profile-image {
+    border-radius: 50%;
+}
+
+/* Styling for the notification icon */
+.notification {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling for the rounds section */
+.rounds {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+/* Styling for each round */
+.single-round {
+    background-color: rgba(62, 146, 204, 0.5);
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    width: max-content;
+    border: 2.5px solid gray; /* Added to create a gray border */
+}
+
+/* Hover effect for each round */
+.single-round:hover {
+    background-color: rgba(232, 74, 74, 0.8);
+}
+
+/* Styling for the links inside each round */
+.single-round-link {
+    color: black;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Bottom margin for the navigation bar */
+.nav-bar-bottom-margin {
+    margin-bottom: 20px;
+}
+
+/* Styling for the assessment header */
+.assessment-header {
+    position: absolute;
+    top: 95px;
+    left: 215px;
+}
+
+/* Styling for the assessment text */
+.assessment-text {
+    position: absolute;
+    top: 170px;
+    right: 165px;
+    display: flex;
+    gap: 100px;
+}
+
+/* Container for text blocks */
+.text-block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling for text blocks */
+.text-block {
+    background-color: #D9D9D9;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 10px;
+    width: 400px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+/* Styling for large text blocks */
+.text-block-large {
+    min-height: 220px; /* Adjust as necessary */
+}
+
+/* Styling for small text blocks */
+.text-block-small {
+    min-height: 80px; /* Adjust as necessary */
+}
+
+/* Styling for inline images */
+.inline-image {
+    width: 50px;
+    height: auto;
+}
+
+/* Styling for assessment buttons */
+.assessment-buttons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for buttons */
+.button {
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.2;
+    width: 200px;
+}
+
+/* Repeated styling for assessment buttons */
+.assessment-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 170px 0 220px;
+}
+
+/* Styling for locked content */
+.locked-content {
+    position: absolute;
+    top: 70px; /* Adjust as necessary */
+    left: 200px; /* Adjust as necessary */
+    width: 1050px;
+    height: 520px;
+    background-color: rgba(217, 217, 217, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 50px;
+    flex-direction: column;
+}
+
+/* Styling for the lock icon */
+.lock-icon {
+    width: 200px;
+    height: 200px;
+}
+
+/* Styling for the locked content message */
+.locked-message {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    width: 500px;
+}
+
+/* Styling for the START button */
+.start-button {
+    background-color: #E74C3C;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 25px;
+    border-radius: 50px;
+    width: 200px;
+    font-size: 25px;
+    cursor: pointer; /* Added to change cursor to pointer */
+}
+
+/* Styling for the custom horizontal line */
+.custom-line {
+    border: 0;
+    height: 527px;
+    background: black;
+    position: absolute;
+    left: 179px; /* Adjust this value to align the line with the edge of the rounds */
+    width: 2.5px;
+    top: 66px; /* Adjust this value to start the line at the end of the header */
+    bottom: 0;
+}

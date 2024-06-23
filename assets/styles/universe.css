@@ -1,0 +1,100 @@
+/* Basic styles for the body of the page */
+body {
+    font-family: "Red Hat Text", sans-serif;;
+    background-image: url('/images/fundo_da_pagina_de_login.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+/* Styles for the main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between boxes */
+}
+
+/* Styles for the universe and group creation containers */
+.create-universe-container, .create-group-container {
+    background-color: #1F2A50;
+    border-radius: 10px;
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: 4px solid #FFFFFF;
+}
+
+/* Styles for headings inside the containers */
+.create-universe-container h1, .create-group-container h2 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Styles for form groups */
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Styles for images (icons) inside form groups */
+.form-group img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+/* Styles for text input fields */
+.create-universe-container input[type="text"],
+.create-group-container input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Adjust padding to include icon */
+    margin: 10px 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styles for placeholders in text input fields */
+.create-universe-container input[type="text"]::placeholder,
+.create-group-container input[type="text"]::placeholder {
+    color: #CCCCCC;
+}
+
+/* Styles for action buttons */
+.create-universe-container button,
+.create-group-container button {
+    background-color: #E84A4A;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Styles for action buttons on hover */
+.create-universe-container button:hover,
+.create-group-container button:hover {
+    background-color: #D13A3A;
+}
+
+/* Hide labels */
+label {
+    color: #FFFFFF;
+    display: none;
+}

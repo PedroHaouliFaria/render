@@ -1,0 +1,107 @@
+/* Reset de margens e preenchimentos, e ajuste de box-sizing */
+* {
+  margin: 0; /* Reset de margem */
+  padding: 0; /* Reset de preenchimento */
+  box-sizing: border-box; /* Box model que inclui padding e border na largura e altura total do elemento */
+  text-decoration: none; /* Remoção de decoração de texto padrão */
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Definindo família de fontes */
+  background-image: url('/images/fundo_da_pagina_de_login.png'); /* Imagem de fundo */
+  background-size: 100% 100%; /* Tamanho da imagem de fundo */
+  background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+  background-position: center; /* Posicionamento da imagem de fundo */
+  display: flex; /* Container flexível */
+  justify-content: center; /* Centralizando conteúdo horizontalmente */
+  align-items: center; /* Centralizando conteúdo verticalmente */
+  height: 100vh; /* Altura total da viewport */
+  margin: 0; /* Reset de margem */
+}
+
+/* Estilos para o contêiner de login */
+.login-container {
+  background-color: #1F2A50; /* Cor de fundo */
+  border-radius: 10px; /* Raio de borda */
+  padding: 40px; /* Preenchimento interno */
+  width: 300px; /* Largura do contêiner */
+  text-align: center; /* Alinhamento do texto */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  outline-style: solid; /* Estilo de contorno */
+  outline-width: 4px; /* Largura do contorno */
+  outline-color: #FFFFFF; /* Cor do contorno */
+}
+
+/* Estilos para os títulos dentro do contêiner de login */
+.login-container h1 {
+  color: #FFFFFF; /* Cor do texto */
+  margin-bottom: 20px; /* Margem inferior */
+  font-size: 40px; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte */
+}
+
+.login-container h2 {
+  color: #FFFFFF; /* Cor do texto */
+  margin-bottom: 20px; /* Margem inferior */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 550; /* Peso da fonte (semi-negrito) */
+}
+
+/* Estilos para os grupos de formulários e ícones */
+.form-group {
+  position: relative; /* Posição relativa */
+}
+
+.form-group img {
+  position: absolute; /* Posição absoluta */
+  top: 50%; /* Posicionamento no topo */
+  left: 10px; /* Posicionamento à esquerda */
+  transform: translateY(-50%); /* Ajuste de transformação para centralizar verticalmente */
+  width: 20px; /* Largura da imagem */
+  height: 20px; /* Altura da imagem */
+}
+
+/* Estilos para os campos de entrada de email e senha */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%; /* Largura total */
+  padding: 10px 10px 10px 40px; /* Preenchimento (topo, direita, inferior, esquerda) */
+  margin: 10px 0; /* Margem (superior e inferior) */
+  border: 1px solid #CCCCCC; /* Borda */
+  border-radius: 5px; /* Raio de borda */
+  box-sizing: border-box; /* Ajuste do box model */
+}
+
+.login-container input[type="email"]::placeholder,
+.login-container input[type="password"]::placeholder {
+  color: #CCCCCC; /* Cor do placeholder */
+}
+
+/* Estilos para o botão de login */
+.login-container button {
+  background-color: #E84A4A; /* Cor de fundo */
+  color: #FFFFFF; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 10px; /* Preenchimento */
+  width: 50%; /* Largura */
+  border-radius: 5px; /* Raio de borda */
+  cursor: pointer; /* Cursor ao passar */
+  font-size: 16px; /* Tamanho da fonte */
+  margin-top: 20px; /* Margem superior */
+}
+
+.login-container button:hover {
+  background-color: #D13A3A; /* Cor de fundo ao passar */
+}
+
+/* Estilos para o link de Sign Up */
+.login-container p {
+  color: #FFFFFF; /* Cor do texto */
+  margin-top: 20px; /* Margem superior */
+}
+
+.login-container a {
+  color: #E84A4A; /* Cor do link */
+  font-weight: bold; /* Peso da fonte */
+}

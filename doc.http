@@ -1,0 +1,51 @@
+### Lista de Usuários
+GET http://localhost:1337/users
+Accept: application/json
+
+###
+
+### Criação de Usuários
+POST http://localhost:1337/api/user
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "country": "Brazil",
+  "email": "john.doe@example.com",
+  "password": "securepassword",
+  "group": "Flamengo",
+}
+
+}
+
+###
+
+### Mostrar Formulário de Criação de Usuário
+GET http://localhost:1337/user/create
+Accept: text/html
+
+###
+
+### Criar Usuário via Formulário
+POST http://localhost:3000/user/create
+Content-Type: application/x-www-form-urlencoded
+
+name=Novo+Usuário&bio=Esta+é+a+biografia+do+novo+usuário.&country=Brasil
+
+###
+
+### Ler Informações de um Usuário Específico
+GET http://localhost:3000/user/1
+Accept: application/json
+
+###
+
+### Atualizar Informações de um Usuário Específico
+PUT http://localhost:3000/user/1
+Content-Type: application/json
+
+{
+  "name": "Usuário Atualizado",
+  "bio": "Esta é a biografia atualizada do usuário.",
+  "country": "Portugal"
+}

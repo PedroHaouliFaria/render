@@ -1,0 +1,260 @@
+* {
+  margin: 0; /* Resetting margin */
+  padding: 0; /* Resetting padding */
+  box-sizing: border-box; /* Box model to include padding and border in element's total width and height */
+  text-decoration: none; /* Removing text decoration */
+  max-width: 100%; /* Ensuring elements don't exceed parent's width */
+  max-height: 100%; /* Ensuring elements don't exceed parent's height */
+}
+
+body {
+  font-size: 100%; /* Setting default font size */
+  font-family: "Red Hat Text", sans-serif; /* Setting font family */
+  margin: 0; /* Resetting body margin */
+  padding: 0; /* Resetting body padding */
+  background-color: #2b78ae; /* Setting background color */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hiding overflow */
+  position: relative; /* Setting position relative for children positioning */
+  
+}
+
+.BackImage {
+  position: absolute; /* Absolute positioning */
+  background-position-x: center; /* Centering background horizontally */
+  background-position-y: center; /* Centering background vertically */
+  width:100%; /* Full width */
+  height:90%; /* 90% of parent height */
+  top:24.8%; /* Position from top */
+  left: 0,5%; /* Position from left (seems like a typo, should be 0.5%) */
+  z-index: -1; /* Behind other elements */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  height: 60px;
+  background-color: #17255a;
+}
+
+/* Estilos para o container do cabeçalho */
+header {
+height: 50px; /* Setting header height */
+}
+
+.Headers {
+height: 60px; /* Setting header container height */
+background-color: #17255a; /* Setting background color */
+display: flex; /* Flex container */
+flex-wrap: wrap; /* Allow wrapping */
+justify-content: space-between; /* Distributing items evenly */
+color: #ffffff; /* Setting text color */
+align-self: center; /* Centering vertically */
+padding: 6px; /* Adding padding */
+}
+
+.GroupColor {
+font-size: 1.2rem; /* Setting font size */
+font-weight: bold; /* Setting font weight */
+display: flex; /* Flex container */
+align-self: center; /* Centering vertically */
+}
+
+.Pages {
+font-size: 1.15rem; /* Setting font size */
+font-weight: 600; /* Setting font weight */
+display: flex; /* Flex container */
+align-self: center; /* Centering vertically */
+justify-content: space-around; /* Distributing items evenly */
+}
+
+.Pages a {
+flex: 1; /* Flexible width */
+margin: 0 100px; /* Margin around each link */
+color: #ffffff; /* Setting text color */
+}
+
+.Pages a:hover {
+text-decoration: underline; /* Underline on hover */
+}
+
+.profileInfo {
+display: flex; /* Flex container */
+align-self:auto; /* Aligning content */
+}
+
+.profileInfo a:hover {
+  text-decoration: none; /* Underline on hover */
+  color: #ffffff; /* Setting text color */
+}
+
+.Username {
+flex: 1; /* Flexible width */
+align-self: center; /* Centering vertically */
+font-size: 1.3rem; /* Setting font size */
+color: #ffffff; /* Setting text color */
+font-weight: bold
+}
+
+.Username a:hover{
+text-decoration: none
+}
+
+.profileInfo a:hover {
+text-decoration: none; /* Underline on hover */
+color: #ffffff; /* Setting text color */
+}
+
+
+main {
+  display: flex; /* Flex container */
+  flex-direction: row; /* Row direction */
+  align-items: center; /* Aligning items vertically */
+}
+
+.profile-picture {
+  width: 480px; /* Setting width */
+  position: absolute; /* Absolute positioning */
+  top: 24%; /* Position from top */
+  left: 11.5%; /* Position from left */
+}
+
+.bio-section {
+  display: flex; /* Flex container */
+  flex-direction: column; /* Column direction */
+  align-items: center; /* Aligning items vertically */
+  margin: 0 50px; /* Margin around bio section */
+  position: absolute; /* Absolute positioning */
+  top: 40%; /* Position from top */
+  left: 40%; /* Position from left */
+  border: 4px solid #31175A; /* Border styling */
+  border-radius: 20px; /* Border radius */
+}
+
+#country {
+  border-radius: 20px; /* Border radius */
+  padding: 20px; /* Padding */
+  position: absolute; /* Absolute positioning */
+  top: 0%; /* Position from top */
+  left: -69%; /* Position from left */
+  resize: none; /* Disabling resize */
+
+
+}
+
+
+#University {
+  border-radius: 20px; /* Border radius */
+  padding: 20px; /* Padding */
+  position: absolute; /* Absolute positioning */
+  top: 90%; /* Position from top */
+  left: -69%; /* Position from left */
+  resize: none; /* Disabling resize */
+}
+
+#bio {
+  border-radius: 20px; /* Border radius */
+  padding: 20px; /* Padding */
+  resize: none; /* Disabling resize */
+}
+
+.profile-Left {
+  float: left; /* Floating left */
+  margin: 0 50px; /* Margin around profile left section */
+  display: flex; /* Flex container */
+  flex-direction: column; /* Column direction */
+  align-items: center; /* Aligning items vertically */
+}
+
+.profile-actions {
+  float: right; /* Floating right */
+  margin: 0 50px; /* Margin around profile actions section */
+  display: flex; /* Flex container */
+  flex-direction: column; /* Column direction */
+  align-items: center; /* Aligning items vertically */
+  position: absolute; /* Absolute positioning */
+  top: 35%; /* Position from top */
+  left: 18%; /* Position from left */
+}
+
+.fundobranco {
+  position: absolute; /* Absolute positioning */
+  width: 101.5%; /* Slightly wider than viewport */
+  height: 100%; /* Full height */
+  top: 4.2%; /* Position from top */
+  left: 0%; /* Position from left */
+}
+
+#rectangle {
+  width: 200px; /* Setting width */
+  height: 100px; /* Setting height */
+  background-color: lightblue; /* Setting background color */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Position from top */
+  left: 50%; /* Position from left */
+  transform: translate(-50%, -50%); /* Centering horizontally and vertically */
+  display: none; /* Initially hidden */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.PosicaoBotao {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Estilos do botão */
+
+background-color: #00bfff; /* Azul claro bebê */
+color: #fff; /* Cor do texto */
+border: 2px solid #87CEEB; /* Borda azul clara */
+border-radius: 10px; /* Bordas arredondadas de leve */
+padding: 10px 20px; /* Espaçamento interno */
+font-size: 18px; /* Tamanho da fonte */
+font-weight: bold; /* Negrito */
+cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+transition: background-color 0.3s, transform 0.3s; /* Transição suave para o hover */
+height: 1cm;
+}
+
+.PosicaoBotao:hover {
+  background-color: #87CEEB; /* Cor de fundo ao passar o mouse */
+  transform: translate(-50%, -50%) scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+.char-counter
+{
+position: absolute;
+top: 90%;
+left: 1.8%;
+}
+
+.ColorName{
+  color: #ffffff;
+  position: absolute;
+  font-size: 0,5cm;
+  top: 02.5%;
+  left: 87%;
+  font-weight: 700;
+  font-size: 1.0rem;
+  font-family: 'Red Hat Text', sans-serif;
+
+}
+
+.ColorName a:hover{
+  text-decoration: none;
+}
+
+.ColorName2{
+  color: #000000;
+  position: absolute;
+  top: 03%;
+  left: 91%;
+  font-family: 'Red Hat Text', sans-serif;
+}

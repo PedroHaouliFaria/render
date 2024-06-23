@@ -1,0 +1,128 @@
+/* Resetting margins and paddings, and adjusting box-sizing */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+}
+
+/* Basic styles for the body of the page */
+body {
+  font-family: "Red Hat Text", sans-serif;;
+    background-image: url('/images/fundo_da_pagina_de_login.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+/* Styles for the login and create user containers */
+.login-container,
+.create-user-container {
+  background-color: #1F2A50;
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px; /* Adjusted for consistent width */
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  outline: 4px solid #FFFFFF;
+}
+
+/* Styles for the headings inside the containers */
+.login-container h1,
+.create-user-container h1 {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.login-container h2 {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 550; /* Semi-bold */
+}
+
+/* Styles for form groups */
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Styles for images (icons) inside form groups */
+.form-group img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Styles for input fields (email, password, text, select) */
+.login-container input[type="email"],
+.login-container input[type="password"],
+.create-user-container input[type="text"],
+.create-user-container input[type="email"],
+.create-user-container input[type="password"],
+.create-user-container select {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Adjust padding to include icon */
+  margin: 10px 0;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-container input[type="email"]::placeholder,
+.login-container input[type="password"]::placeholder,
+.create-user-container input[type="text"]::placeholder,
+.create-user-container input[type="email"]::placeholder,
+.create-user-container input[type="password"]::placeholder {
+  color: #CCCCCC;
+}
+
+/* Styles for buttons */
+.login-container button,
+.create-user-container button {
+  background-color: #E84A4A;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.login-container button:hover,
+.create-user-container button:hover {
+  background-color: #D13A3A;
+}
+
+/* Styles for the Sign Up link */
+.login-container p {
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.login-container a {
+  color: #E84A4A;
+  font-weight: bold;
+}
+
+/* Hide labels */
+label {
+  color: #FFFFFF;
+  display: none;
+}

@@ -1,0 +1,174 @@
+* {
+  margin: 0; /* Resetting margin */
+  padding: 0; /* Resetting padding */
+  box-sizing: border-box; /* Box model includes padding and border in element's total width and height */
+  text-decoration: none; /* Removing text decoration */
+  max-width: 100%; /* Ensuring elements don't exceed parent's width */
+  max-height: 100%; /* Ensuring elements don't exceed parent's height */
+}
+
+body {
+  font-size: 100%; /* Setting default font size */
+  font-family: "Red Hat Text", sans-serif; /* Setting font family */
+  margin: 0; /* Resetting body margin */
+  padding: 0; /* Resetting body padding */
+  background-color: #007ea7; /* Setting background color */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hiding overflow */
+  position: relative; /* Setting position relative for children positioning */
+}
+
+.BackImage {
+  position: absolute; /* Absolute positioning */
+  background-position-x: center; /* Centering background horizontally */
+  background-position-y: center; /* Centering background vertically */
+  width: 100%; /* Full width */
+  height: 90%; /* 90% of parent height */
+  top: 18.8%; /* Position from top */
+  left: 0.5%; /* Position from left */
+  z-index: -1; /* Behind other elements */
+}
+
+header {
+  height: 50px; /* Setting header height */
+}
+
+.Headers {
+  height: 60px; /* Setting header container height */
+  background-color: #17255a; /* Setting background color */
+  display: flex; /* Flex container */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Distributing items evenly */
+  color: #ffffff; /* Setting text color */
+  align-self: center; /* Centering vertically */
+  padding: 6px; /* Adding padding */
+}
+
+.GroupColor {
+  font-size: 1.2rem; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.Pages {
+  font-size: 1.15rem; /* Setting font size */
+  font-weight: 600; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+  justify-content: space-around; /* Distributing items evenly */
+}
+
+.Pages a {
+  flex: 1; /* Flexible width */
+  margin: 0 100px; /* Margin around each link */
+  color: #ffffff; /* Setting text color */
+}
+
+.Pages a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.profileInfo {
+  display: flex; /* Flex container */
+  align-self: normal; /* Aligning content */
+}
+
+.Username {
+  flex: 1; /* Flexible width */
+  margin: 8px; /* Margin around username */
+  align-self: center; /* Centering vertically */
+  font-size: 1.1rem; /* Setting font size */
+  color: #ffffff; /* Setting text color */
+}
+
+.profileInfo a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #ffffff; /* Setting text color */
+}
+
+.ImageProfile {
+  width: 40px; /* Setting width */
+  height: 40px; /* Setting height */
+}
+
+main {
+  position: relative; /* Relative positioning */
+  align-self: center; /* Centering vertically */
+  display: grid; /* Grid container */
+  place-items: center; /* Centering items */
+}
+
+.Box {
+  position: relative; /* Relative positioning */
+  width: 750px; /* Setting width */
+  height: 450px; /* Setting height */
+  margin: 10px; /* Margin around box */
+  border: black 1px solid; /* Border styling */
+  border-top-left-radius: 5px; /* Border radius */
+  border-top-right-radius: 15px; /* Border radius */
+  border-bottom-right-radius: 30px; /* Border radius */
+  border-bottom-left-radius: 30px; /* Border radius */
+  background-color: #3e92cc; /* Setting background color */
+  margin-top: 30px; /* Margin from the top */
+}
+
+.top {
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.container {
+  margin: 10px; /* Margin */
+}
+
+.MemberPhoto {
+  margin: 20px; /* Margin */
+  width: 150px; /* Setting width */
+  height: 150px; /* Setting height */
+  border: #17255a 5px solid; /* Border styling */
+  border-radius: 50%; /* Border radius */
+}
+
+.MemberName {
+  margin-top: 10px; /* Margin from the top */
+  font-size: 1.8rem; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+}
+
+.nationality {
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+  font-weight: 600; /* Setting font weight */
+}
+
+.MemberInformation {
+  margin-top: 15px; /* Margin from the top */
+  font-weight: 600; /* Setting font weight */
+}
+
+.country {
+  margin-left: 5px; /* Margin from the left */
+  width: 30px; /* Setting width */
+  height: 30px; /* Setting height */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.Down {
+  display: flex; /* Flex container */
+  place-items: center; /* Centering items */
+  flex-direction: column; /* Column direction */
+}
+
+textarea {
+  width: 500px; /* Setting width */
+  height: 220px; /* Setting height */
+  margin: 0 auto; /* Centering horizontally */
+  padding: 20px; /* Padding */
+  border-radius: 20px; /* Border radius */
+  resize: none; /* Disabling resize */
+  background-color: #ffffff; /* Setting background color */
+  font-family: "Red Hat Text", sans-serif; /* Setting font family */
+  color: black; /* Setting text color */
+}

@@ -1,0 +1,201 @@
+/* Reset de margens, preenchimentos, e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+    font-size: 100%;
+    font-family: "Red Hat Text", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #6f92c5 0%, #007EA7 100%);
+    color: #ffffff;
+}
+
+/* Estilo para a imagem de fundo */
+.BackImage {
+  position: absolute;
+  background-position-x: center;
+  background-position-y: center;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  top: 18.8%;
+  left: 0.5%;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    height: 60px;
+    background-color: #17255a;
+}
+
+/* Estilos para o container do cabeçalho */
+header {
+  height: 50px; /* Setting header height */
+}
+
+.Headers {
+  height: 60px; /* Setting header container height */
+  background-color: #17255a; /* Setting background color */
+  display: flex; /* Flex container */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Distributing items evenly */
+  color: #ffffff; /* Setting text color */
+  align-self: center; /* Centering vertically */
+  padding: 6px; /* Adding padding */
+}
+
+.GroupColor {
+  font-size: 1.2rem; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+}
+
+.Pages {
+  font-size: 1.15rem; /* Setting font size */
+  font-weight: 600; /* Setting font weight */
+  display: flex; /* Flex container */
+  align-self: center; /* Centering vertically */
+  justify-content: space-around; /* Distributing items evenly */
+}
+
+.Pages a {
+  flex: 1; /* Flexible width */
+  margin: 0 100px; /* Margin around each link */
+  color: #ffffff; /* Setting text color */
+}
+
+.Pages a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #ffffff
+}
+
+.profileInfo {
+  display: flex; /* Flex container */
+  align-self:auto; /* Aligning content */
+}
+
+.Username {
+  flex: 1; /* Flexible width */
+  align-self: center; /* Centering vertically */
+  font-size: 1.3rem; /* Setting font size */
+  color: #ffffff; /* Setting text color */
+  font-weight: bold
+}
+
+.Username a:hover{
+  text-decoration: none
+}
+
+.profileInfo a:hover {
+  text-decoration: none; /* Underline on hover */
+  color: #ffffff; /* Setting text color */
+}
+
+.ImageProfile {
+  width: 40px; /* Setting width */
+  height: 40px; /* Setting height */
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para a tabela */
+.container {
+    background-color: rgba(23, 37, 90, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #00aaff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #ffffff;
+}
+
+.table th {
+    background-color: #2a5298;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 170, 255, 0.2);
+}
+
+/* Estilos para a seção superior */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a primeira fileira */
+.fileira1 {
+    display: flex;
+    flex-direction: row;
+    width: 780px;
+    height: 60px;
+    border-radius: 20%;
+}
+
+/* Estilos para cada bloco na primeira fileira */
+.bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6, .bloco7 {
+    width: 60px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 30%;
+    background-color: #ffffff;
+    color: #17255a;
+}
+
+/* Estilos para os blocos individuais */
+.bloco2, .bloco3, .bloco4, .bloco5, .bloco6, .bloco7 {
+    width: 48px;
+    height: 42px;
+    border-radius: 20%;
+}
+
+/* Estilos para os retângulos */
+.retângulo1, .retângulo2, .retângulo3, .retângulo4, .retângulo5, .retângulo6 {
+    width: 70px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #17255a;
+    border-radius: 10px;
+}

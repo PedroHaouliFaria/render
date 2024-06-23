@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile page for your group members" />
+    <title>Profile page</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet"/>
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles/aboutMe.css" />
+  </head>
+  
+  <body class="ColorBack">
+    <!-- Background image -->
+    <img src="images/fundo-branco.png" class="fundobranco"/> 
+
+    <!-- Link to Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Header section -->
+    <header>
+      <nav class="Headers">
+        <div class="GroupColor">
+          <!-- Display group name or default to 'Group' -->
+          <p><%= user.group && user.group.name ? user.group.name : 'Group' %></p>
+        </div>
+        <div class="Pages">
+          <a href="/teampage"><p>Team</p></a>
+          <a href="/questions"><p>Rating</p></a>
+        </div>
+        <div class="profileInfo">
+          <!-- Display user name or default to 'Guest' -->
+          <a href="/aboutme" class="ColorName"><p><%= user.name ? user.name : 'Guest' %></p></a>
+        </div>  
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <section class="profile-Left">
+        <!-- Placeholder for rectangle content -->
+        <div id="meuRetangulo" class="retangulo"><p></p></div>
+      </section>
+
+      <!-- Biography section -->
+      <div class="bio-section">
+        <label for="bio"></label>
+        <form id="updateBioForm" onsubmit="submitBioUpdate(); return false;">
+          <!-- Textarea for biography -->
+          <textarea id="bio" name="updatedBio" rows="15" cols="50" maxlength="500" placeholder="Write your biography here..."></textarea>
+          <button class="PosicaoBotao" type="submit">Submit Bio</button>
+        </form>
+
+        <!-- Textarea for country, read-only -->
+        <textarea id="country" readonly name="country" rows="1" cols="25" maxlength="500" placeholder="Put your country">Country not available</textarea>
+
+        <!-- Character counter -->
+        <div id="charCounter" class="char-counter">0/500</div>
+      </div>
+
+      <section class="profile-actions">
+        <!-- Display user name or default to 'Guest' -->
+        <h1 class="ColorName2"><span><%= user.name ? user.name : 'Guest' %></span></h1>
+      </section>
+    </main>
+
+    <!-- Team box/menu -->
+    <div id="rectangle"> test:</div>
+
+    <script>
+      // Fetch user details and update the UI
+      fetch('/api/users')
+        .then(response => {
+          console.log('Response:', response); // Log da resposta
+          return response.json();
+        })
+        .then(data => {
+          console.log('Data:', data); // Log dos dados recebidos
+          const user = data.find(u => u.id === <%= JSON.stringify(user.id) %>); // Encontre o usuário correspondente
+
+          if (user && user.country) {
+            document.getElementById('country').textContent = user.country.name;
+          } else {
+            document.getElementById('country').textContent = 'Country not available';
+          }
+        })
+        .catch(error => console.error('Error fetching user details:', error));
+
+      // Check if there's any stored data for the user's biography
+      if (localStorage.getItem('bioText')) {
+        // Set the value of the biography textarea with the saved content
+        document.getElementById('bio').value = localStorage.getItem('bioText');
+      }
+
+      // Add an event listener for the 'input' event in the textarea
+      document.getElementById('bio').addEventListener('input', function() {
+        // Store the current content of the textarea in local storage
+        localStorage.setItem('bioText', this.value);
+      });
+
+      // Character counter for the biography textarea
+      const bioTextarea = document.getElementById('bio');
+      const charCounter = document.getElementById('charCounter');
+
+      bioTextarea.addEventListener('input', () => {
+        const currentLength = bioTextarea.value.length;
+        charCounter.textContent = `${currentLength}/500`;
+      });
+
+      // Function to submit the bio update
+      function submitBioUpdate() {
+        var bio = document.getElementById('bio').value;
+        fetch('/updateBio', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ updatedBio: bio }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('Bio updated successfully!');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Failed to update bio.');
+        });
+      }
+    </script>
+  </body>
+</html>

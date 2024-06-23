@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles/tutor.css" />
+</head>
+<body>
+    <img src="/images/fundo_da_pagina_de_login" alt="">
+
+    <div class="create-user-container">
+        <h1>Create a New User</h1>
+        <form id="createUserForm">
+            
+            <div class="form-group">
+                <!-- Ícone de nome -->
+                <img src="/images/Iconuser.svg" alt="Name Icon">
+                <!-- Campo de entrada para o nome -->
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+                <!-- Ícone de email -->
+                <img src="/images/icone de email.png" alt="Email Icon">
+                <!-- Campo de entrada para o email -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <!-- Ícone de senha -->
+                <img src="/images/icone de senha.png" alt="Password Icon">
+                <!-- Campo de entrada para a senha -->
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="form-group">
+                <!-- Ícone de confirmação de senha -->
+                <img src="/images/icone de senha.png" alt="Confirm Password Icon">
+                <!-- Campo de entrada para a confirmação de senha -->
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="form-group">
+                <!-- Ícone de grupo -->
+                <img src="/images/icone de grupo.png" alt="Group Icon">
+                <!-- Campo de seleção de grupo -->
+                <select id="groupId" name="groupId" required>
+                    <option value="">Select a group</option>
+                </select>
+            </div>
+
+            <div class="form-country">
+                <!-- Campo de seleção de país -->
+                <select id="countryId" name="countryId" required>
+                    <option value="">Select a country</option>
+                </select>
+            </div>
+
+            <!-- Botão para criar o usuário -->
+            <button type="submit">Create User</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para buscar os grupos disponíveis quando a página carrega
+        async function fetchGroups() {
+            try {
+                const response = await fetch('/api/group');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const groups = await response.json();
+                const groupSelect = document.getElementById('groupId');
+
+                // Adiciona os grupos ao campo de seleção
+                groups.forEach(group => {
+                    const option = document.createElement('option');
+                    option.value = group.id;
+                    option.textContent = group.name;
+                    groupSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Failed to fetch groups:', error);
+            }
+        }
+
+        // Função para buscar os países disponíveis quando a página carrega
+        async function fetchCountries() {
+            try {
+                const response = await fetch('/api/country');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const countries = await response.json();
+                const countrySelect = document.getElementById('countryId');
+
+                // Adiciona os países ao campo de seleção
+                countries.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.id;
+                    option.textContent = country.name;
+                    countrySelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Failed to fetch countries:', error);
+            }
+        }
+
+        // Chama a função fetchGroups e fetchCountries quando o conteúdo do documento é carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchGroups();
+            fetchCountries();
+        });
+
+        // Manipulador de evento para o formulário de criação de usuário
+        document.getElementById('createUserForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const groupId = document.getElementById('groupId').value;
+            const countryId = document.getElementById('countryId').value;
+
+            // Verifica se as senhas correspondem
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            // Envia uma solicitação POST para criar o usuário
+            const response = await fetch('/api/user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, password, group: groupId, country: countryId })
+            });
+
+            if (response.ok) {
+                alert('User created successfully!');
+                document.getElementById('createUserForm').reset();
+                window.location.href = '/'; // Redireciona para a tela principal
+            } else {
+                alert('Failed to create user');
+            }
+        });
+    </script>
+</body>
+</html>

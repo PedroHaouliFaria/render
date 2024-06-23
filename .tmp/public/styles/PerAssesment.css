@@ -1,0 +1,306 @@
+/* Resetting default margins and paddings, and setting box-sizing to border-box for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Styling for the body of the page */
+body {
+    font-size: 100%;
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('assets/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styling for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #17255A;
+    color: white;
+    padding: 8px 18px;
+}
+
+/* Styling for the navigation bar */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 260px;
+}
+
+/* Styling for navigation links */
+.link {
+    color: #ffffff;
+}
+
+/* Container for the page links */
+.page-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    gap: 220px;
+    color: white;
+}
+
+/* Container for profile information */
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+/* Styling for the profile image */
+.profile-image {
+    border-radius: 50%;
+}
+
+/* Styling for the notification icon */
+.notification {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling for the rounds section */
+.rounds {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+/* Styling for each round */
+.single-round {
+    background-color: rgba(62, 146, 204, 0.5);
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    width: max-content;
+    border: 2.5px solid gray; /* Added to create a gray border */
+}
+
+/* Hover effect for each round */
+.single-round:hover {
+    background-color: rgba(232, 74, 74, 0.8);
+}
+
+/* Styling for the links inside each round */
+.single-round-link {
+    color: black;
+    display: block;
+    height: 50px;
+    width: 150px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Bottom margin for the navigation bar */
+.nav-bar-bottom-margin {
+    margin-bottom: 20px;
+}
+
+/* Styling for the assessment header */
+.assessment-header {
+    position: absolute;
+    top: 95px;
+    left: 215px;
+}
+
+/* Styling for the assessment text */
+.assessment-text {
+    position: absolute;
+    top: 170px;
+    right: 165px;
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+}
+
+/* Container for text blocks */
+.text-block-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start; /* Changed from center to flex-start */
+    margin-left: -60px; /* Added to move elements to the right */
+}
+
+/* Styling for text blocks */
+.text-block {
+    background-color: #D9D9D9;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    width: 400px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    flex-wrap: wrap; /* Added to allow items to break to the next line */
+    max-height: 150px; /* Limit the height */
+    overflow-y: auto; /* Add a scrollbar if necessary */
+}
+
+/* Styling for the rating */
+.rating {
+    color: black; /* Added to change the text color to black */
+}
+
+/* Styling for large text blocks */
+.text-block-large {
+    min-height: 0px; /* Adjust as necessary */
+}
+
+/* Styling for small text blocks */
+.text-block-small {
+    min-height: 0px; /* Adjust as necessary */
+}
+
+/* Styling for inline images */
+.inline-image {
+    width: 50px;
+    height: auto;
+}
+
+/* Container for the content */
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the left column */
+.left-column {
+    width: 60%; /* Adjust as necessary */
+}
+
+/* Styling for the right column */
+.right-column {
+    width: 35%; /* Adjust as necessary */
+}
+
+/* Styling for the observations section */
+.observations-section {
+    background-color: #007EA7;
+    color: white;
+    padding: 10px; /* Reduced to decrease height */
+    margin-top: -100px; /* Adjusted to move the section higher */
+    margin-left: 200px; /* Added to move the section to the left */
+    width: 80%; /* Added to decrease the width */
+    border-radius: 15px;
+    border: 2.5px solid black; /* Added to create a black border */
+}
+
+/* Styling for the observations section header */
+.observations-section h2 {
+    color: black; /* Added to change the text color to black */
+}
+
+/* Container for the observation blocks */
+.observations-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Reduced to decrease width */
+}
+
+/* Styling for observation blocks */
+.observation-block {
+    background-color: #D9D9D9;
+    height: 40px; /* Reduced to decrease height */
+    border-radius: 15px;
+    color: black; /* Added to change the text color to black */
+    overflow: auto; /* Added to maintain block size regardless of content */
+}
+
+/* Styling for buttons */
+.button {
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    width: 180px;
+}
+
+/* Styling for assessment buttons */
+.assessment-buttons {
+    position: absolute;
+    bottom: 175px;
+    margin-left: 1092px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0; /* Removed padding to prevent button overlap */
+    flex-direction: column; /* Changed to column */
+    align-items: center; /* Center the buttons */
+}
+
+/* Styling for the custom horizontal line */
+.custom-line {
+    border: 0;
+    height: 527px;
+    background: black;
+    position: absolute;
+    left: 179px; /* Adjust this value to align the line with the edge of the rounds */
+    width: 2.5px;
+    top: 66px; /* Adjust this value to start the line at the end of the header */
+    bottom: 0;
+}
+
+/* Styling for locked content */
+.locked-content {
+    position: absolute;
+    top: 70px; /* Adjust as necessary */
+    left: 200px; /* Adjust as necessary */
+    width: 1050px;
+    height: 520px;
+    background-color: rgba(217, 217, 217, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 50px;
+    flex-direction: column;
+}
+
+/* Styling for the lock icon */
+.lock-icon {
+    width: 200px;
+    height: 200px;
+}
+
+/* Styling for the locked content message */
+.locked-message {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    width: 500px;
+}
+
+/* Styling for the START button */
+.start-button {
+    background-color: #E74C3C;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 25px;
+    border-radius: 50px;
+    width: 200px;
+    font-size: 25px;
+    cursor: pointer; /* Added to change cursor to pointer */
+}

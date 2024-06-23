@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/teamPage.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <nav class="Headers">
+      <div class="GroupColor">
+        <p><%= user.group && user.group.name ? user.group.name : 'Group' %></p>
+      </div>
+      <div class="Pages">
+        <a href="/teampage"><p>Team</p></a>
+        <a href="/questions"><p>Rating</p></a>
+      </div>
+      <div class="profileInfo">
+        <a href="/aboutme"><span class="Username"><p><%= user.name ? user.name : 'Guest' %></p></span></a></div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Members Group</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Bio</th>
+            <th>DM Style</th>
+          </tr>
+        </thead>
+        <tbody id="users-list"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+<script>
+  fetch('/api/users')
+    .then(response => {
+      console.log('Response:', response); // Log da resposta
+      return response.json();
+    })
+    .then(data => {
+      console.log('Data:', data); // Log dos dados recebidos
+      const usersList = document.getElementById('users-list');
+      data.forEach(user => {
+        const row = document.createElement('tr');
+        row.innerHTML = 
+          `<td>${user.name}</td>
+          <td>${user.email}</td>
+          <td>${user.country ? user.country.name : 'N/A'}</td>
+          <td>${user.bio}</td>
+          <td>${user.dmstyle}</td>`;
+        usersList.appendChild(row);
+      });
+    })
+    .catch(error => console.error('Error fetching users:', error));
+</script>
+</html>

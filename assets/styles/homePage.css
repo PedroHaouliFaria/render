@@ -1,0 +1,89 @@
+* {
+    margin: 0; /* Resetting margin */
+    padding: 0; /* Resetting padding */
+    box-sizing: border-box; /* Box model includes padding and border in element's total width and height */
+    text-decoration: none; /* Removing default text decoration */
+}
+
+body {
+    font-size: 100%; /* Setting default font size */
+    font-family: 'Red Hat Text', sans-serif; /* Setting font family */
+    margin: 0; /* Resetting body margin */
+    padding: 0; /* Resetting body padding */
+    background-color: #E5EFF5; /* Setting background color */
+}
+
+header {
+    background-color: #17255A; /* Setting background color */
+    color: white; /* Setting text color */
+    padding: 14px 20px; /* Adding padding */
+}
+
+.header {
+    display: flex; /* Flex container */
+    flex-direction: row; /* Arranging items horizontally */
+    align-items: center; /* Centering vertically */
+    justify-content: space-between; /* Distributing items evenly */
+}
+
+.header .Group-dropdown {
+    flex: 1; /* Taking up remaining space */
+}
+
+.header .Pages {
+    display: flex; /* Flex container */
+    flex-direction: row; /* Arranging items horizontally */
+    align-items: center; /* Centering vertically */
+    flex: 2; /* Taking up significant space */
+}
+
+.header .profile-info {
+    display: flex; /* Flex container */
+    flex-direction: row; /* Arranging items horizontally */
+    align-items: center; /* Centering vertically */
+    justify-content: flex-end; /* Aligning to the right */
+    gap: 10px; /* Spacing between items */
+    flex: 1; /* Taking up remaining space */
+}
+
+a {
+    color: #ffffff; /* Setting text color */
+    font-size: 0.95rem; /* Setting font size */
+}
+
+.Pages a {
+    margin: 0 120px; /* Margin around each link */
+}
+
+.Username {
+    font-size: 0.95rem; /* Setting font size */
+    margin: 0 20px; /* Margin around the username */
+}
+
+.Notificacao {
+    width: 30px; /* Setting width */
+    height: 30px; /* Setting height */
+}
+
+.Image-Profile {
+    border-radius: 50%; /* Applying border radius for a circular shape */
+    width: 45px; /* Setting width */
+    height: 45px; /* Setting height */
+}
+
+main {
+    padding: 20px; /* Adding padding */
+    text-align: center; /* Centering text */
+}
+
+footer {
+    background-color: #17255A; /* Setting background color */
+    color: white; /* Setting text color */
+    text-align: center; /* Centering text */
+    padding: 10px 0; /* Padding top and bottom */
+    position: fixed; /* Fixing position at the bottom */
+    width: 100%; /* Full width */
+    bottom: 0; /* Aligning to the bottom */
+}
+
+

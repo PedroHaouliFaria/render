@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Universe and Group</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles/universe.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Container para criar um novo universo -->
+        <div class="create-universe-container">
+            <h1>Create a New Universe</h1>
+            <form id="createUniverseForm">
+                <div class="form-group">
+                    <label for="universeName">Universe Name:</label>
+                    <!-- Ícone de universo -->
+                    <img src="/images/icone de universo.png" alt="Universe Icon">
+                    <!-- Campo de entrada para o nome do universo -->
+                    <input type="text" id="universeName" name="universeName" placeholder="Universe Name" required>
+                </div>
+                <!-- Botão para criar o universo -->
+                <button type="submit">Create Universe</button>
+            </form>
+        </div>
+
+        <!-- Container para criar um novo grupo -->
+        <div class="create-group-container">
+            <h2>Create a New Group</h2>
+            <form id="createGroupForm">
+                <div class="form-group">
+                    <label for="groupName">Group Name:</label>
+                    <!-- Ícone de grupo -->
+                    <img src="/images/icone de grupo.png" alt="Group Icon">
+                    <!-- Campo de entrada para o nome do grupo -->
+                    <input type="text" id="groupName" name="groupName" placeholder="Group Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="universeNameForGroup">Universe Name:</label>
+                    <!-- Ícone de universo -->
+                    <img src="/images/icone de universo.png" alt="Universe Icon">
+                    <!-- Campo de entrada para o nome do universo relacionado ao grupo -->
+                    <input type="text" id="universeNameForGroup" name="universeNameForGroup" placeholder="Universe Name" required>
+                </div>
+                <!-- Botão para criar o grupo -->
+                <button type="submit">Create Group</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Manipulador de evento para o formulário de criação de universo
+        document.getElementById('createUniverseForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            const universeName = document.getElementById('universeName').value;
+
+            // Envia uma solicitação POST para criar o universo
+            const response = await fetch('/api/universe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: universeName })
+            });
+
+            if (response.ok) {
+                const universe = await response.json();
+                alert('Universo criado com sucesso com o nome: ' + universe.name);
+                // Define o nome do universo no formulário de criação de grupo
+                document.getElementById('universeNameForGroup').value = universe.name;
+                document.getElementById('createUniverseForm').reset();
+            } else {
+                alert('Falha ao criar o universo');
+            }
+        });
+
+        // Manipulador de evento para o formulário de criação de grupo
+        document.getElementById('createGroupForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            const groupName = document.getElementById('groupName').value;
+            const universeNameForGroup = document.getElementById('universeNameForGroup').value;
+
+            console.log('Enviando criação de grupo com os dados:', { name: groupName, universeName: universeNameForGroup });
+
+            // Envia uma solicitação POST para criar o grupo
+            const response = await fetch('/api/group', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: groupName, universeName: universeNameForGroup })
+            });
+
+            if (response.ok) {
+                alert('Grupo criado com sucesso!');
+                document.getElementById('createGroupForm').reset();
+            } else {
+                const errorData = await response.json();
+                alert('Falha ao criar o grupo: ' + (errorData.error || 'Erro desconhecido'));
+            }
+        });
+    </script>
+</body>
+</html>

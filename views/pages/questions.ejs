@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the webpage responsive -->
+    <meta name="description" content="Profile page for your group members" /> <!-- Description of the page -->
+    <title>Self Evaluation</title> <!-- Title of the page -->
+    <link rel="stylesheet" href="styles/questions.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav class="Headers">
+            <div class="GroupColor">
+                <!-- Display the user's group name or 'Group' if not available -->
+                <p><%= user.group && user.group.name ? user.group.name : 'Group' %></p>
+            </div>
+            <div class="Pages">
+                <!-- Navigation links -->
+                <a href="/teampage"><p>Team</p></a>
+                <a href="/questions"><p>Rating</p></a>
+            </div>
+            <div class="profileInfo">
+                <!-- Link to the user's profile page with their name or 'Guest' if not available -->
+                <a href="/aboutme"><span class="ColorName"><h2><%= user.name ? user.name : 'Guest' %></h2></span></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Progress bar section -->
+        <div class="progress-bar">
+            <span1>1/6</span1>
+            <span2>Pre-round</span2>
+        </div>
+        <div class="progress"></div>
+        
+        <!-- Content section with the self-evaluation form -->
+        <div class="content">
+            <h2>About Yourself</h2>
+            <main>
+                <form id="evaluationForm">
+                    <!-- Questions and answer options -->
+                    <div class="question answers" id="question1">
+                        <p>1. When working on projects I </p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question1" value="A" />
+                                <span> A. Like tasks that are clear and have defined outcomes</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question1" value="B" />
+                                <span> B. Am comfortable when task and outcomes are not well defined</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question2">
+                        <p>2. If there are major changes during a project I</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question2" value="A" />
+                                <span> A. tend to be annoyed because I like to stick to the original work.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question2" value="B" />
+                                <span> B. easily adapt the work plan to the changes.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question3">
+                        <p>3. When it comes to planning I rather</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question3" value="A" />
+                                <span> A. make decisions quickly without knowing the outcomes exactly.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question3" value="B" />
+                                <span> B. prepare a few options and think through them before I decide.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question4">
+                        <p>4. In projects I am more a person who</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question4" value="A" />
+                                <span> A. relies on facts and researched data for analyzing the problem and proposing solutions.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question4" value="B" />
+                                <span> B. sees the underlying problem as well as potential solutions, which might not be visible for others.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question5">
+                        <p>5. Between two options, choose one that describes you the best</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question5" value="A" />
+                                <span> A. I value the relations within my team and try to make each member feel included and important. I appreciate their opinion and seek their approval before making a final decision. My big motivation is to maintain harmony.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question5" value="B" />
+                                <span> B. I value co-workers that have a sense of purpose and can speak and act concretely. I prefer to take action, rather than dreaming of impossible opportunities. I prefer to rely on rules in order to move forward. I am motivated by the results my decisions will bring.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question6">
+                        <h4>Please read the following situation and choose the solution that fit you best:</h4>
+                        <p>6. You are a team leader and have a worker that is showing poor results, which normally would lead to dismissal of this worker. However, you are also aware that his life circumstances has changed drastically, which causes stress. And might explain his poor performance. Because he/she does not deliver the expected results, other workers do his/her job and become unsatisfied with extra workload. You already tried talking to him/her, but situation hasn`t changed much. What would be your action plan?</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question6" value="A" />
+                                <span> A. I understand that everyone can encounter problems, but I also have responsibilities as a leader to deliver results and care for the whole team, so I will have to replace this person.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question6" value="B" />
+                                <span> B. I will do my best to make things work out for both sides. The worker will stay employed, I accept lesser performance, I will see if I can adjust the work and will discuss with other workers why they might have to help the worker.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <div class="question answers" id="question7">
+                        <h4>Please read the following situation and choose the solution that fit you best:</h4>
+                        <p>7. You have been unemployed for the last year and finally you got a good offer from a company, however recently there was an investigation about them using an underpaid workforce to manufacture their goods. It is not a big scandal, but around 30 people has left the place since. Majority of the companies are doing the same in this business. What would be your action plan?</p>
+                        <ul>
+                            <label class="answer-option">
+                                <input type="radio" name="question7" value="A" />
+                                <span> A. Because I need a job, I will accept the offer. After all, I can not change the whole system just by refusing this offer.</span>
+                            </label>
+                            <br>
+                            <label class="answer-option">
+                                <input type="radio" name="question7" value="B" />
+                                <span> B. I will turn down the offer as I do not want to be working for a company under this investigation. I must make a stand for the underpaid workforce, even if I need a job.</span>
+                            </label>
+                        </ul>
+                    </div>
+
+                    <!-- Submit button for the form -->
+                    <button class="PosicaoBotao" type="submit">Submit</button>
+                </form>
+                <div id="result" style="display:none;">
+                    <h2>Evaluation Result</h2>
+                    <div id="resultContent"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <h1 class="SelfAssessment">Self Assessment</h1>
+    
+    <script>
+        // Event listener for form submission
+        document.getElementById('evaluationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            const formData = new FormData(event.target);
+            const respostas = [];
+        
+            // Collect the answers from the form
+            formData.forEach((value, key) => {
+                respostas.push({ text: value });
+            });
+        
+            const data = { respostas };
+        
+            // Send the collected data to the server
+            fetch('/api/submit-evaluation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Evaluation submitted successfully!');
+                
+                // Display the result of the evaluation
+                const resultContent = document.getElementById('resultContent');
+                let message = `<p>Questões 1, 2 e 3: ${data.resultadoTratamento.result1}</p>`;
+                message += `<p>Questões 4, 5, 6 e 7: ${data.resultadoTratamento.result2}</p>`;
+                message += `<p>Resultado Final: ${data.resultadoTratamento.finalResult}</p>`;
+                
+                resultContent.innerHTML = message;
+                document.getElementById('result').style.display = 'block';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error submitting your evaluation.');
+            });
+        });
+    </script>
+</body>
+</html>

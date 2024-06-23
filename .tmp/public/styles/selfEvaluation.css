@@ -1,0 +1,69 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Set default font size and family for the body */
+body {
+    font-size: 100%;
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #17255A;
+    color: white;
+    padding: 8px 18px;
+}
+
+/* Style for elements with class 'header' */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 260px;
+}
+
+/* Style for all anchor tags */
+a {
+    color: #ffffff; 
+}
+
+/* Style for elements with class 'Pages' */
+.Pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    gap: 220px;
+    color: white;
+}
+
+/* Style for elements with class 'profile-info' */
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+/* Style for elements with class 'Image-Profile' */
+.Image-Profile {
+    border-radius: 50%;
+}
+
+/* Style for elements with class 'Notificacao' */
+.Notificacao {
+    width: 40px;
+    height: 40px;
+}
